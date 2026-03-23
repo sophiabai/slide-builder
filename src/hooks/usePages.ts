@@ -50,7 +50,7 @@ export function useUpdatePage() {
 export function useDeletePage() {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: ({ id, deckId }: { id: string; deckId: string }) =>
+    mutationFn: ({ id, deckId: _deckId }: { id: string; deckId: string }) =>
       pagesApi.deletePage(id),
     onSuccess: (_data, vars) => {
       queryClient.invalidateQueries({ queryKey: ['pages', vars.deckId] })

@@ -6,7 +6,7 @@ import type { PageUpdate } from '@/lib/types/database'
 export function useAutoSave(pageId: string, deckId: string) {
   const updatePage = useUpdatePage()
   const setSaveStatus = useEditorStore((s) => s.setSaveStatus)
-  const timerRef = useRef<ReturnType<typeof setTimeout>>()
+  const timerRef = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const save = useCallback(
     async (updates: PageUpdate) => {

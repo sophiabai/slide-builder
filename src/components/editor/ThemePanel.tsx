@@ -19,7 +19,7 @@ export function ThemePanel({ deck }: ThemePanelProps) {
   const updateDeck = useUpdateDeck()
   const [theme, setTheme] = useState<Theme>(deck.theme)
   const [customColor, setCustomColor] = useState('')
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>()
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   useEffect(() => {
     setTheme(deck.theme)
