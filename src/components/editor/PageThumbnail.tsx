@@ -50,7 +50,7 @@ export function PageThumbnail({
       <div
         className="aspect-video rounded-md overflow-hidden p-2 flex flex-col justify-center"
         style={{
-          backgroundColor: theme.mode === 'dark' ? '#0F0F0F' : '#FFFFFF',
+          backgroundColor: theme.mode === 'dark' ? '#0F0F0F' : 'oklch(0.99 0.01 102)',
           color: theme.mode === 'dark' ? '#F5F5F5' : '#1A1A1A',
         }}
       >

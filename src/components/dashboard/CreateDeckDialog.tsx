@@ -108,7 +108,7 @@ export function CreateDeckDialog({ open, onOpenChange }: CreateDeckDialogProps) 
                       ? 'border-primary bg-primary/10 text-primary'
                       : 'border-border hover:bg-muted'
                   )}
-                  style={{ fontFamily: font === 'system' ? 'system-ui' : font }}
+                  style={{ fontFamily: font === 'system' ? 'system-ui' : font === 'Degular' ? 'degular' : `'${font}'` }}
                   onClick={() => setTheme({ ...theme, fontFamily: font })}
                 >
                   {font}

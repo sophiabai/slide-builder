@@ -4,7 +4,7 @@ import type { CSSProperties } from 'react'
 export function themeToCSS(theme: Theme): CSSProperties {
   const isDark = theme.mode === 'dark'
   return {
-    '--slide-bg': isDark ? '#0F0F0F' : '#FFFFFF',
+    '--slide-bg': isDark ? '#0F0F0F' : 'oklch(0.99 0.01 102)',
     '--slide-text': isDark ? '#F5F5F5' : '#1A1A1A',
     '--slide-text-secondary': isDark ? '#A0A0A0' : '#6B7280',
     '--slide-accent': theme.accentColor,
@@ -16,5 +16,6 @@ export function themeToCSS(theme: Theme): CSSProperties {
 
 function fontFamilyValue(font: Theme['fontFamily']): string {
   if (font === 'system') return 'system-ui, -apple-system, sans-serif'
+  if (font === 'Degular') return 'degular, system-ui, sans-serif'
   return `'${font}', system-ui, sans-serif`
 }

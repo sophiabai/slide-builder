@@ -40,7 +40,7 @@ export function DeckCard({ deck }: DeckCardProps) {
       onClick={() => navigate(`/deck/${deck.id}`)}
     >
       <div className="aspect-video rounded-md mb-3 overflow-hidden relative"
-        style={{ backgroundColor: deck.theme.mode === 'dark' ? '#0F0F0F' : '#F5F5F5' }}
+        style={{ backgroundColor: deck.theme.mode === 'dark' ? '#0F0F0F' : 'oklch(0.99 0.01 102)' }}
       >
         <div className="absolute bottom-2 right-2 flex gap-1">
           <div

@@ -1,16 +1,17 @@
 export interface Theme {
   mode: 'dark' | 'light'
   accentColor: string
-  fontFamily: 'Inter' | 'Space Grotesk' | 'IBM Plex Sans' | 'JetBrains Mono' | 'system'
+  fontFamily: 'Degular' | 'Inter' | 'Space Grotesk' | 'IBM Plex Sans' | 'JetBrains Mono' | 'system'
 }
 
 export const DEFAULT_THEME: Theme = {
   mode: 'dark',
   accentColor: '#6366F1',
-  fontFamily: 'Inter',
+  fontFamily: 'Degular',
 }
 
 export const FONT_OPTIONS: Theme['fontFamily'][] = [
+  'Degular',
   'Inter',
   'Space Grotesk',
   'IBM Plex Sans',
